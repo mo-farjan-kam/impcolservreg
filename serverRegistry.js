@@ -1,6 +1,12 @@
+
 const express = require('express');
 const app = express();
 app.use(express.json());
+
+app.get('/', (req, res) => {
+  res.send('Registry service is running!');
+});
+
 
 let servers = {}; // Object keyed by serverId
 
